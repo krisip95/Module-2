@@ -1,0 +1,18 @@
+package edu.smg04;
+
+public class Recursion1 {
+
+	public static void main(String[] args) {
+		System.out.println("Sum is " + yMethod(5));
+	}
+	
+	public static int yMethod(int n) {
+		int sum = 0;
+		for( int i = 1; i <= n; i++) { 
+			sum += i;
+		}
+		return sum;
+		
+		}
+
+}
