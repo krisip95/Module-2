@@ -1,6 +1,6 @@
 ackage edu.smg04;
 
-public class Recursion2 {
+public class Recursion1_2 {
 	public static void main(String[] args) {
 		yMethod(1234567);
 	}
