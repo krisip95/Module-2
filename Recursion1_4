@@ -2,7 +2,7 @@ package edu.smg04;
 
 import java.util.Scanner;
 
-public class Recursion4 {
+public class Recursion1_4 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int x = sc.nextInt();
