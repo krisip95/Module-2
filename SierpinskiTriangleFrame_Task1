@@ -1,0 +1,45 @@
+package edu.smg04;
+
+import java.awt.BorderLayout;
+import java.awt.Graphics;
+import java.awt.Point;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+public class SierpinskiTraingleFrame_Task1 extends JFrame {
+	static int r = 0, gr = 0, b = 255;
+	static int order = 0;
+	
+	private JButton PlusOrder = new JButton("+");
+	private JButton MinusOrder = new JButton("-");
+	private SierpinskiTrianglePanel_3 trianglePanel = new SierpinskiTrianglePanel_3(); // To display the pattern
+
+	public SierpinskiTraingleFrame_Task1() {
+// Panel to hold label, text field, and a button
+		JPanel panel = new JPanel();
+		panel.add(PlusOrder);
+		panel.add(MinusOrder);
+		PlusOrder.setHorizontalAlignment(SwingConstants.LEFT);
+		MinusOrder.setHorizontalAlignment(SwingConstants.RIGHT);
+// Add a Sierpinski triangle panel to the frame
+		add(trianglePanel);
+		add(panel, BorderLayout.SOUTH);
+// Register a listener
+		PlusOrder.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				order++;
+				trianglePanel.setOrder(order);
+			}
+		});
+		MinusOrder.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				order--;
+				trianglePanel.setOrder(order);
+			}
+		});
+
+	}
