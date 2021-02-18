@@ -41,7 +41,7 @@ public class SierpinskiTrianglePanel_Task2 extends JPanel {
 				//g.drawLine(p1.x, p1.y, p3.x, p3.y);
 				//g.drawLine(p2.x, p2.y, p3.x, p3.y);
 				
-				int x[] = {p1.x, p2.x, p3.x}; //x;y -> koordinatitite v koito se risuva triugulnik
+				int x[] = {p1.x, p2.x, p3.x}; 
 				int y[] = {p1.y, p2.y, p3.y};
 				x[0] = p1.x; x[1] = p2.x; x[2] = p3.x;
 				y[0] = p1.y; y[1] = p2.y; y[2] = p3.y;
