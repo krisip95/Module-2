@@ -40,7 +40,7 @@ public class SierpinskiTraingleFrame_Task1 extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 			//TODO Auto-generated method stub
-			trianglePanel.decreaseOrder(); //ako order = 0 -> stop
+			trianglePanel.decreaseOrder(); // ako order = 0 -> stop
 		}
 	});
 	}
