@@ -1,0 +1,27 @@
+package edu.smg05;
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class GUI_List7_3 {
+	public static void main(String[] args) {
+		LinkedList<Integer> numbers = new LinkedList<>(); 
+		System.out.println("Enter nimbers:"); 
+		Scanner sc = new Scanner(System.in);
+		for( int i = 0; i < 5; i++  ) { 
+			Integer number = sc.nextInt();
+			if( ! numbers.contains(number)) {
+				numbers.add(number); 
+			}
+		}
+		
+		System.out.println(numbers);
+		Collections.sort(numbers); 
+		System.out.println(numbers);
+		Collections.sort(numbers, Collections.reverseOrder()); 
+		System.out.println(numbers);
+		Collections.shuffle(numbers);
+		System.out.println(numbers);   
+     }
+}
