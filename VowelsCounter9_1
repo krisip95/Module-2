@@ -1,0 +1,41 @@
+package edu.smg05;
+
+import java.util.*;
+import java.io.*;
+
+public class VowelsCounter9_1 {
+	public static void main(String[] args) throws Exception {
+		File file = new File("src/edu/smg05/Ball.java");
+		if (file.exists()) {
+			countVowelsAndConsonants(file);
+		} else {
+			System.out.println("File does not exist");
+		}
+	}
+	
+	public static void countVowelsAndConsonants (File file) throws Exception {
+		Character[] vowelsArray = { 'A', 'E', 'O', 'U', 'I' }; 
+		Set<Character> vowelsSet = new HashSet<Character>(Arrays.asList(vowelsArray));
+		int countVowels = 0; 
+		int countConsonants = 0;
+		
+		FileReader fr = new FileReader(file);;
+		BufferedReader br = new BufferedReader(fr); //Creation of BufferedReader object
+		int c = 0;
+		
+		while ((c = br.read()) != -1) //Read char by Char 
+		{ 
+			char character = (char) c;
+			if (character > 'a' && character < 'z'
+					|| character > 'A' && character < 'Z') { 
+				if (vowelsSet.contains(character)) {
+					countVowels++; 
+				} else {
+					countConsonants++;
+			}
+		}
+	}
+		
+		System.out.println("Vowels: " + countVowels + ", consonants: " + countConsonants);
+	}
+}
