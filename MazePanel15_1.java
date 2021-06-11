@@ -12,14 +12,9 @@ public class MazePanel15_1 extends JPanel{
 	
 	public MazePanel15_1(){
 		try {
-			m = new Maze15_1("src/edu.smg06/mazes.txt15_1");
+			m = new Maze15_1("src/edu/smg06/mazes.txt");
 			//print maze before
-			for(int i = 0; i < m.maze.length; i++) {
-				for(int j = 0; j < m.maze[i].length; j++) {
-					System.out.print(m.maze[i][j]);
-				}
-				System.out.println();
-			}
+			
 			
 			if (MazeSolver15_1.solveMaze(m)) {
 				System.out.println("You won!");
@@ -27,13 +22,7 @@ public class MazePanel15_1 extends JPanel{
 				System.out.println("No path");
 			}
 			
-			//print maze after
-			for(int i = 0; i < m.maze.length; i++) {
-				for(int j = 0; j < m.maze[i].length; j++) {
-					System.out.print(m.maze[i][j]);
-				}
-				System.out.println();
-			}
+			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
